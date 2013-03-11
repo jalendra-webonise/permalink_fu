@@ -125,11 +125,7 @@ module PermalinkFu
           end
         end
       end
-<<<<<<< HEAD
       while ((self.permalink_options[:use_sti] ? self.class.base_class : self.class).exists?(conditions))
-=======
-      while self.class.exists?(conditions)
->>>>>>> d6f8d899b80fc6cb90fc54b9a268f70b4683feb0
         suffix = "-#{counter += 1}"
         conditions[1] = "#{base[0..limit-suffix.size-1]}#{suffix}"
         send("#{self.class.permalink_field}=", conditions[1])
